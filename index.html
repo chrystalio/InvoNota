@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/styles/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mt-16 lg:mt-24 mx-4 px-4 lg:mx-56">
+        <h1 class="text-2xl lg:text-4xl font-bold tracking-tight font-cantarell">InvoNota</h1>
+        <p class="text-gray-600 text-sm lg:text-md px-0.5 font-quattrocento-sans">Simple & Fast Invoice Generator</p>
+    </div>
+    <div class="my-10 mx-4 px-4 border-0 lg:mx-56">
+        <h2 class="text-lg font-quattrocento-sans font-semibold">Invoice Details</h2>
+        <form action="" method="post">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
+                <div>
+                    <label for="invoice-number" class="block text-sm lg:text-md font-quattrocento-sans">Invoice
+                        Number</label>
+                    <input type="text" id="invoice-number" name="invoice-number" placeholder="INV-0001"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                </div>
+                <div>
+                    <label for="issue-date" class="block text-sm lg:text-md font-quattrocento-sans">Issue Date</label>
+                    <input type="date" id="issue-date" name="issue-date"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                </div>
+                <div>
+                    <label for="due-date" class="block text-sm lg:text-md font-quattrocento-sans">Due Date</label>
+                    <input type="date" id="due-date" name="due-date"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                </div>
+            </div>
+            <div>
+                <label for="business-logo" class="block text-sm lg:text-md font-quattrocento-sans">Business Logo
+                    (Optional)</label>
+                <input type="file" id="business-logo" name="business-logo"
+                    accept="image/png, image/jpeg, image/jpg, image/svg+xml"
+                    class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 my-4">
+                <div>
+                    <h3 class="text-lg py-3 font-quattrocento-sans font-semibold">Business Details</h3>
+                    <label for="business-name" class="block text-sm lg:text-md font-quattrocento-sans">Business
+                        Name</label>
+                    <input type="text" id="business-name" name="business-name"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+
+                    <label for="business-address" class="block text-sm lg:text-md font-quattrocento-sans mt-2">Business
+                        Address</label>
+                    <textarea id="business-address" name="business-address"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required></textarea>
+
+                    <label for="business-email" class="block text-sm lg:text-md font-quattrocento-sans mt-2">Business
+                        Email</label>
+                    <input type="email" id="business-email" name="business-email" placeholder="jane@business.com"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                </div>
+                <div>
+                    <h3 class="text-lg py-3 font-quattrocento-sans font-semibold">Customer Details</h3>
+                    <label for="customer-name" class="block text-sm lg:text-md font-quattrocento-sans">Customer
+                        Name</label>
+                    <input type="text" id="customer-name" name="customer-name"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+
+                    <label for="customer-address" class="block text-sm lg:text-md font-quattrocento-sans mt-2">Customer
+                        Address</label>
+                    <textarea id="customer-address" name="customer-address"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required></textarea>
+
+                    <label for="customer-email" class="block text-sm lg:text-md font-quattrocento-sans mt-2">Customer
+                        Email</label>
+                    <input type="email" id="customer-email" name="customer-email" placeholder="john@example.com"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-md font-quattrocento-sans font-semibold">Invoice Items</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
+                    <input type="text" placeholder="Item Name"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                    <input type="number" placeholder="Quantity"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                    <input type="number" placeholder="Price"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                </div>
+                <button type="button" class="mt-2 text-slate-800 text-sm font-semibold font-quattrocento-sans">Add Item
+                    +</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
