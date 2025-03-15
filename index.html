@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="mt-10 lg:mt-24 mx-4 px-4 lg:mx-72">
+    <div class="mt-10 lg:mt-12 mx-4 px-4 lg:mx-72">
         <h1 class="text-2xl lg:text-4xl font-bold tracking-tight font-cantarell">InvoNota</h1>
         <p class="text-gray-600 text-sm lg:text-md px-0.5 font-quattrocento-sans">Simple & Fast Invoice Generator</p>
     </div>
@@ -102,6 +102,29 @@
                 </div>
             </div>
             <div>
+                <h2 class="text-lg font-quattrocento-sans font-semibold">Payment Details</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
+                    <div>
+                        <label for="bank-name" class="block text-sm lg:text-md font-quattrocento-sans">Bank Name</label>
+                        <input type="text" id="bank-name"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                    </div>
+                    <div>
+                        <label for="account-name" class="block text-sm lg:text-md font-quattrocento-sans">Account Name</label>
+                        <input type="text" id="account-name"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                    </div>
+                    <div>
+                        <label for="account-number" class="block text-sm lg:text-md font-quattrocento-sans">Account Name</label>
+                        <input type="text" id="account-number"
+                        class="w-full border border-gray-300 rounded-md px-2 py-1 text-sm lg:text-md font-quattrocento-sans"
+                        required>
+                    </div>
+                </div>
+            </div>
+            <div>
                 <h2 class="text-lg font-quattrocento-sans font-semibold">Invoice Details</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
                     <input type="text" placeholder="Item Name"
@@ -118,14 +141,14 @@
                     +</button>
             </div>
         </form>
-        <div class="mt-6 grid grid-cols-1 gap-4">
+        <div class="mt-4 grid grid-cols-1 gap-2">
             <button id="preview-invoice"
                 class="w-full text-white text-sm font-semibold font-quattrocento-sans px-6 py-2 bg-slate-700 border border-slate-700 rounded-md hover:bg-slate-800 transition duration-200">
                 Preview Invoice
             </button>
         </div>
     </div>
-    <footer class="mx-4 pb-8 lg:py-4 lg:mx-72">
+    <footer class="mx-4 pb-8 lg:py-2 lg:mx-72">
         <p class="text-gray-600 text-sm text-center lg:text-md font-quattrocento-sans">
             Made with ☕ by
             <a href="https://kriscode.cloud" target="_blank" class="text-slate-700 font-semibold">
