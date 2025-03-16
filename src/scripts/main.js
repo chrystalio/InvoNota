@@ -25,6 +25,31 @@ document.querySelectorAll("input, select, textarea").forEach(input => {
     input.addEventListener('input', saveFormData);
 });
 
+// Load saved data from LocalStorage
+function loadFormData() {
+    const savedData = localStorage.getItem('invoiceData');
+
+    if (savedData) {
+        const formData = JSON.parse(savedData);
+
+        document.getElementById('invoice-number').value = formData.invoiceNumber;
+        document.getElementById('currency').value = formData.currency;
+        document.getElementById('tax').value = formData.tax;
+        document.getElementById('issue-date').value = formData.issueDate;
+        document.getElementById('due-date').value = formData.dueDate;
+        document.getElementById('business-name').value = formData.businessName;
+        document.getElementById('business-address').value = formData.businessAddress;
+        document.getElementById('business-email').value = formData.businessEmail;
+        document.getElementById('customer-name').value = formData.customerName;
+        document.getElementById('customer-address').value = formData.customerAddress;
+        document.getElementById('customer-email').value = formData.customerEmail;
+        document.getElementById('bank-name').value = formData.bankName;
+        document.getElementById('account-name').value = formData.accountName;
+        document.getElementById('account-number').value = formData.accountNumber;
+    }
+}
+
+
 
 document.getElementById('generate').addEventListener('click', function () {
     // Get form values
