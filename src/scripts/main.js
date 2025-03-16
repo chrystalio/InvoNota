@@ -1,5 +1,14 @@
 // Save Data to LocalStorage
 const saveFormData = () => {
+    const items = [];
+    document.querySelectorAll("[placeholder='Item Name']").forEach((item, index) => {
+        items.push({
+            name: item.value,
+            quantity: document.querySelectorAll("[placeholder='Quantity']")[index].value,
+            price: document.querySelectorAll("[placeholder='Price']")[index].value
+        });
+    });
+
     const formData = {
         invoiceNumber: document.getElementById('invoice-number').value,
         currency: document.getElementById('currency').value,
@@ -15,6 +24,7 @@ const saveFormData = () => {
         bankName: document.getElementById('bank-name').value,
         accountName: document.getElementById('account-name').value,
         accountNumber: document.getElementById('account-number').value,
+        items
     }
 
     localStorage.setItem('invoiceData', JSON.stringify(formData));
