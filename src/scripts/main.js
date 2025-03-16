@@ -49,6 +49,9 @@ const loadFormData = () => {
     }
 }
 
+// Load saved data when the page is loaded
+document.addEventListener('DOMContentLoaded', loadFormData);
+
 
 
 document.getElementById('generate').addEventListener('click', function () {
