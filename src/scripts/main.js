@@ -52,6 +52,14 @@ const loadFormData = () => {
 // Load saved data when the page is loaded
 document.addEventListener('DOMContentLoaded', loadFormData);
 
+// Clear form and remove LocalStorage
+document.getElementById('clear-form').addEventListener('click', function () {
+    document.querySelectorAll("input, select, textarea").forEach(input => {
+        input.value = '';
+    });
+    localStorage.removeItem('invoiceData');
+});
+
 
 
 document.getElementById('generate').addEventListener('click', function () {
