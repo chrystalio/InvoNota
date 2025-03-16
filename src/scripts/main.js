@@ -56,6 +56,16 @@ const loadFormData = () => {
         document.getElementById('bank-name').value = formData.bankName;
         document.getElementById('account-name').value = formData.accountName;
         document.getElementById('account-number').value = formData.accountNumber;
+
+        if (formData.items) {
+            document.querySelectorAll("[placeholder='Item Name']").forEach((item, index) => {
+                if (formData.items[index]) {
+                    item.value = formData.items[index].name;
+                    document.querySelectorAll("[placeholder='Quantity']")[index].value = formData.items[index].quantity;
+                    document.querySelectorAll("[placeholder='Price']")[index].value = formData.items[index].price;
+                }
+            });
+        }
     }
 }
 
