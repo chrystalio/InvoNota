@@ -26,7 +26,7 @@ document.querySelectorAll("input, select, textarea").forEach(input => {
 });
 
 // Load saved data from LocalStorage
-function loadFormData() {
+const loadFormData = () => {
     const savedData = localStorage.getItem('invoiceData');
 
     if (savedData) {
