@@ -60,8 +60,7 @@ document.getElementById('clear-form').addEventListener('click', function () {
     localStorage.removeItem('invoiceData');
 });
 
-
-
+// Generate invoice items
 document.getElementById('generate').addEventListener('click', function () {
     // Get form values
     const invoiceNumber = document.getElementById('invoice-number').value || '-';
